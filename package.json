@@ -1,0 +1,15 @@
+{
+  "name": "bookfinder",
+  "version": "1.0.0",
+  "description": "make book search engine",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ahmed Elbakary",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0"
+  }
+}
