@@ -36,15 +36,30 @@ function searchBook(){
                 bookTitle.innerHTML = book.items[i].volumeInfo.title ;
 
 
-                var author = document.createElement('h4');
-                author.innerHTML = book.items[i].volumeInfo.authors ;
+                var author = document.createElement('h6');
+                author.innerHTML ="<b>Author</b>:- " +book.items[i].volumeInfo.authors ;
 
                 var country = document.createElement('p');
-                country.innerHTML ="Country:- " + book.items[i].accessInfo.country ;
+                country.innerHTML ="<b>Country</b>:- " + book.items[i].accessInfo.country ;
 
+
+                var pages = document.createElement('p');
+                pages.innerHTML ="<b>Pages</b>:- " + book.items[i].volumeInfo.pageCount ;
+
+                var publishYear = document.createElement('p');
+                publishYear.innerHTML ="<b>Published</b>:- " + book.items[i].volumeInfo.publishedDate ;
+
+                var publisher = document.createElement('p');
+                publisher.innerHTML ="<b>Publisher</b>:- " + book.items[i].volumeInfo.publisher ;
 
                 var description = document.createElement('p');
                 description.innerHTML = book.items[i].volumeInfo.description;
+
+
+
+                var link = document.createElement('a');
+                link.innerHTML ="View more" ;
+                link.href = book.items[i].volumeInfo.previewLink ;
 
 
                 // create horizontal line
@@ -55,7 +70,11 @@ function searchBook(){
                 bookInfoDiv.appendChild(bookTitle);
                 bookInfoDiv.appendChild(author);
                 bookInfoDiv.appendChild(country);
+                bookInfoDiv.appendChild(pages);
+                bookInfoDiv.appendChild(publishYear);
+                bookInfoDiv.appendChild(publisher);
                 bookInfoDiv.appendChild(description);
+                bookInfoDiv.appendChild(link);
 
                 // append image to book div
                 bookDiv.appendChild(image);
